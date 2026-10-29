@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: Yikun/hub-mirror-action@master
         with:
-          src: github/fangtang951210/auto-mirror-test
+          src: github/fangtang951210
           dst: gitee/cubesugar951210
           dst_token: ${{ secrets.GITEE_TOKEN }}
           static_list: auto-mirror-test
