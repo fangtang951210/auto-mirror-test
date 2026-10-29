@@ -1,0 +1,14 @@
+name: Mirror to Gitee
+on: [push, workflow_dispatch]
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/fangtang951210/auto-mirror-test
+          dst: gitee/cubesugar951210
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          static_list: auto-mirror-test
+          force_update: true
+          timeout: '10m'
